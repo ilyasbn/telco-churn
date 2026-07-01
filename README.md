@@ -22,7 +22,7 @@ Important cleaning decisions:
 - `TotalCharges` is converted from text to numeric.
 - The 11 blank `TotalCharges` values are customers with `tenure = 0`, so they are set to `0`.
 - Missing numeric values are imputed with the training median.
-- Missing categorical values are imputed with the training mode.
+- Missing categorical values are imputed with the most frequent category using training data for each categorical column.
 - Categorical columns are one-hot encoded with unknown categories ignored at prediction time.
 
 ## Project Files
