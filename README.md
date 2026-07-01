@@ -92,8 +92,13 @@ Rows are actual classes and columns are predictions:
 - 176 false churn alerts
 - 136 missed churners
 
-For this problem, recall and ROC AUC matter more than accuracy alone because
-the churn class is smaller and usually more important for retention work.
+Accuracy is useful, but it is not enough for churn prediction. 
+Most customers do not churn, so we have imbalanced classes and a model can look accurate while still missing many customers
+who are about to leave. <br>
+**Recall** shows how many real churners the model catches.<br>
+**ROC AUC** gives a wider view of how well the model separates churners from
+non-churners across different thresholds. In a retention project, missing a
+likely churner is usually more costly than sending one extra retention alert.
 
 ## Predict
 
